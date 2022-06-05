@@ -30,7 +30,7 @@ class WelcomePage extends StatelessWidget {
       ),),
     ),
     onPressed: () => Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => const HomePage(),)
+        MaterialPageRoute(builder: (context) => HomePage(),)
     ),
   );
 
