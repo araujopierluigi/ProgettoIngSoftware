@@ -7,6 +7,15 @@ class HomePage extends StatefulWidget{
 }
 
 class _HomePageState extends State<HomePage>{
+
+  final List<String> _listItem = [
+    'assets/images/Acanthoscurria-geniculata-300x180.jpg',
+    'assets/images/Theraphosa-blondii-300x180.jpg',
+    'assets/images/Euathlus-auratum-300x180.jpg',
+    'assets/images/Grammostola-spatulata-300x180.jpg',
+    'assets/images/Haplopelma-lividus-300x180.jpg',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +26,7 @@ class _HomePageState extends State<HomePage>{
         title: Text("Aranea"),
       ),
       body: SafeArea(
-        child: SingleChildScrollView(
+        child: Container(
           padding: EdgeInsets.all(20.0),
           child: Column(
             children: <Widget>[
@@ -59,13 +68,30 @@ class _HomePageState extends State<HomePage>{
                         ),
                       ),
                       SizedBox(height: 30,),
-                      GridView.count(
-                          crossAxisCount: 2
-                      )
-
                     ],
                   ),
                 ),
+              ),
+              SizedBox(height: 20,),
+              Expanded(
+                  child: GridView.count(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    children: _listItem.map((item) => Card(
+                      color: Colors.transparent,
+                      elevation: 0,
+                      child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            image: DecorationImage(
+                                image: AssetImage(item),
+                                fit: BoxFit.cover
+                            )
+                        ),
+                      ),
+                    )).toList(),
+                  )
               )
 
             ],

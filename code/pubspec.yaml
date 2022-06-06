@@ -62,6 +62,10 @@ flutter:
     - assets/images/start_logo.png
     - assets/images/Acanthoscurria-geniculata-300x180.jpg
     - assets/images/homepage.jpg
+    - assets/images/Theraphosa-blondii-300x180.jpg
+    - assets/images/Euathlus-auratum-300x180.jpg
+    - assets/images/Grammostola-spatulata-300x180.jpg
+    - assets/images/Haplopelma-lividus-300x180.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
