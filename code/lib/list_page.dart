@@ -8,16 +8,49 @@ class HomePage extends StatefulWidget{
 
 class _HomePageState extends State<HomePage>{
 
-  final List<String> _listItem = [
-    'assets/images/Acanthoscurria-geniculata-300x180.jpg',
-    'assets/images/Theraphosa-blondii-300x180.jpg',
-    'assets/images/Euathlus-auratum-300x180.jpg',
-    'assets/images/Grammostola-spatulata-300x180.jpg',
-    'assets/images/Haplopelma-lividus-300x180.jpg',
-  ];
+  final Items item1 = new Items(
+    title: "Ragno1",
+    subtitle: "",
+    event: "",
+    img: "assets/images/Acanthoscurria-geniculata-300x180.jpg",
+    routeName: "/acanthoscurriaGeniculata"
+  );
+
+  final Items item2 = new Items(
+      title: "Ragno2",
+      subtitle: "",
+      event: "",
+      img: "assets/images/Theraphosa-blondii-300x180.jpg",
+      routeName: "" //da cambiare
+  );
+
+  final Items item3 = new Items(
+      title: "Ragno3",
+      subtitle: "",
+      event: "",
+      img: "assets/images/Euathlus-auratum-300x180.jpg",
+      routeName: "/acanthoscurriaGeniculata" //da cambiare
+  );
+
+  final Items item4 = new Items(
+      title: "Ragno4",
+      subtitle: "",
+      event: "",
+      img: "assets/images/Grammostola-spatulata-300x180.jpg",
+      routeName: "/acanthoscurriaGeniculata"
+  );
+
+  final Items item5 = new Items(
+      title: "Ragno1",
+      subtitle: "",
+      event: "",
+      img: "assets/images/Haplopelma-lividus-300x180.jpg",
+      routeName: "/acanthoscurriaGeniculata"
+  );
 
   @override
   Widget build(BuildContext context) {
+    List<Items> _listItem = [item1, item2, item3, item4, item5];
     return Scaffold(
       backgroundColor: Colors.brown[600],
       appBar: AppBar(
@@ -78,14 +111,20 @@ class _HomePageState extends State<HomePage>{
                     crossAxisCount: 2,
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10,
-                    children: _listItem.map((item) => Card(
+                    children: _listItem.map((data) => Card(
                       color: Colors.transparent,
                       elevation: 0,
                       child: Container(
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, data.routeName);
+                          },
+                          splashColor: Colors.white10,
+                        ),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: DecorationImage(
-                                image: AssetImage(item),
+                                image: AssetImage(data.img),
                                 fit: BoxFit.cover
                             )
                         ),
@@ -99,4 +138,14 @@ class _HomePageState extends State<HomePage>{
       ),
     );
   }
+}
+
+class Items {
+  String title;
+  String subtitle;
+  String event;
+  String img;
+  String routeName;
+
+  Items({this.title = '', this.subtitle = '', this.event = '', this.img = '', this.routeName = '',});
 }
