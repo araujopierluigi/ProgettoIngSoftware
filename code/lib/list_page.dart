@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:code/items_path.dart';
 
 class HomePage extends StatefulWidget{
 
@@ -8,49 +9,34 @@ class HomePage extends StatefulWidget{
 
 class _HomePageState extends State<HomePage>{
 
-  final Items item1 = new Items(
-    title: "Ragno1",
-    subtitle: "",
-    event: "",
+  final ItemsPath itemPath1 = new ItemsPath(
     img: "assets/images/Acanthoscurria-geniculata-300x180.jpg",
     routeName: "/acanthoscurriaGeniculata"
   );
 
-  final Items item2 = new Items(
-      title: "Ragno2",
-      subtitle: "",
-      event: "",
+  final ItemsPath itemPath2 = new ItemsPath(
       img: "assets/images/Theraphosa-blondii-300x180.jpg",
       routeName: "" //da cambiare
   );
 
-  final Items item3 = new Items(
-      title: "Ragno3",
-      subtitle: "",
-      event: "",
+  final ItemsPath itemPath3 = new ItemsPath(
       img: "assets/images/Euathlus-auratum-300x180.jpg",
       routeName: "/acanthoscurriaGeniculata" //da cambiare
   );
 
-  final Items item4 = new Items(
-      title: "Ragno4",
-      subtitle: "",
-      event: "",
+  final ItemsPath itemPath4 = new ItemsPath(
       img: "assets/images/Grammostola-spatulata-300x180.jpg",
       routeName: "/acanthoscurriaGeniculata"
   );
 
-  final Items item5 = new Items(
-      title: "Ragno1",
-      subtitle: "",
-      event: "",
+  final ItemsPath itemPath5 = new ItemsPath(
       img: "assets/images/Haplopelma-lividus-300x180.jpg",
       routeName: "/acanthoscurriaGeniculata"
   );
 
   @override
   Widget build(BuildContext context) {
-    List<Items> _listItem = [item1, item2, item3, item4, item5];
+    List<ItemsPath> _listItem = [itemPath1, itemPath2, itemPath3, itemPath4, itemPath5];
     return Scaffold(
       backgroundColor: Colors.brown[600],
       appBar: AppBar(
@@ -138,14 +124,4 @@ class _HomePageState extends State<HomePage>{
       ),
     );
   }
-}
-
-class Items {
-  String title;
-  String subtitle;
-  String event;
-  String img;
-  String routeName;
-
-  Items({this.title = '', this.subtitle = '', this.event = '', this.img = '', this.routeName = '',});
 }
