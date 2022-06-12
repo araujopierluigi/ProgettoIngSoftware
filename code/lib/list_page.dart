@@ -16,22 +16,22 @@ class _HomePageState extends State<HomePage>{
 
   final ItemsPath itemPath2 = new ItemsPath(
       img: "assets/images/Theraphosa-blondii-300x180.jpg",
-      routeName: "" //da cambiare
+      routeName: "/theraphosaBlondii"
   );
 
   final ItemsPath itemPath3 = new ItemsPath(
-      img: "assets/images/Euathlus-auratum-300x180.jpg",
-      routeName: "/acanthoscurriaGeniculata" //da cambiare
+      img: "assets/images/Grammostola-spatulata-300x180.jpg",
+      routeName: "/grammostolaSpatulata"
   );
 
   final ItemsPath itemPath4 = new ItemsPath(
-      img: "assets/images/Grammostola-spatulata-300x180.jpg",
-      routeName: "/acanthoscurriaGeniculata"
+      img: "assets/images/Haplopelma-lividus-300x180.jpg",
+      routeName: "/haplopelmaLividus"
   );
 
   final ItemsPath itemPath5 = new ItemsPath(
-      img: "assets/images/Haplopelma-lividus-300x180.jpg",
-      routeName: "/acanthoscurriaGeniculata"
+      img: "assets/images/Euathlus-auratum-300x180.jpg",
+      routeName: "/euathlusAuratum"
   );
 
   @override

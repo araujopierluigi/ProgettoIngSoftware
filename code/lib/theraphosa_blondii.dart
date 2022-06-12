@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:code/spider.dart';
 
-class AcanthoscurriaGeniculata extends StatefulWidget{
+class TheraphosaBlondii extends StatefulWidget{
   @override
-  _AGPageState createState() => _AGPageState();
+  _TBPageState createState() => _TBPageState();
 }
 
-class _AGPageState extends State<AcanthoscurriaGeniculata>{
+class _TBPageState extends State<TheraphosaBlondii>{
 
-  final Spider spider = new Spider("Acanthoscurria Geniculata");
+  final Spider spider = new Spider("Theraphosa Blondii");
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -29,7 +29,7 @@ class _AGPageState extends State<AcanthoscurriaGeniculata>{
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   image: DecorationImage(
-                      image: AssetImage('assets/images/Acanthoscurria-geniculata-300x180.jpg'),
+                      image: AssetImage('assets/images/Theraphosa-blondii-300x180.jpg'),
                       fit: BoxFit.cover
                   )
               ),
@@ -85,4 +85,3 @@ class _AGPageState extends State<AcanthoscurriaGeniculata>{
     ),
   );
 }
-

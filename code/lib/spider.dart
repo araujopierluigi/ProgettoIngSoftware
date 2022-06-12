@@ -50,16 +50,16 @@ class Spider {
       case "Acanthoscurria Geniculata":
         description = listDescription[0];
         break;
-      case "Theraphosa blondii":
+      case "Theraphosa Blondii":
         description = listDescription[1];
         break;
-      case "Grammostola spatulata":
+      case "Grammostola Spatulata":
         description = listDescription[2];
         break;
-      case "Haplopelma lividus":
+      case "Haplopelma Lividus":
         description = listDescription[3];
         break;
-      case "Euathlus auratum":
+      case "Euathlus Auratum":
         description = listDescription[4];
         break;
     }
@@ -103,16 +103,16 @@ class Spider {
       case "Acanthoscurria Geniculata":
         breeding = listBreeding[0];
         break;
-      case "Theraphosa blondii":
+      case "Theraphosa Blondii":
         breeding = listBreeding[1];
         break;
-      case "Grammostola spatulata":
+      case "Grammostola Spatulata":
         breeding = listBreeding[2];
         break;
-      case "Haplopelma lividus":
+      case "Haplopelma Lividus":
         breeding = listBreeding[3];
         break;
-      case "Euathlus auratum":
+      case "Euathlus Auratum":
         breeding = listBreeding[4];
         break;
     }
